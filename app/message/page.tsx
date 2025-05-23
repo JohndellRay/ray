@@ -13,7 +13,7 @@ export default function MessagePage() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-rose-700">
-              I hope this message finds you well on your journey of self-discovery and growth. I wanted to share some
+              Angela, I hope this message finds you well on your journey of self-discovery and growth. I wanted to share some
               thoughts with you.
             </p>
             <p className="text-rose-700">
