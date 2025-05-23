@@ -13,8 +13,8 @@ export default function MessagePage() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-rose-700">
-              Angela, I hope this message finds you well on your journey of self-discovery and growth. I wanted to share some
-              thoughts with you.
+              Angela, I hope this message finds you well on your journey of self-discovery and growth. I wanted to share
+              some thoughts with you.
             </p>
             <p className="text-rose-700">
               First and foremost, I want you to know that I respect your decision to focus on yourself. It takes
@@ -69,7 +69,7 @@ export default function MessagePage() {
           </CardFooter>
         </Card>
 
-        <p className="text-sm text-center text-rose-500 pt-6">Sent with care and without expectations</p>
+        <p className="text-sm text-center text-rose-500 pt-6">Sent with care and without expectations — Ray</p>
       </div>
     </div>
   )

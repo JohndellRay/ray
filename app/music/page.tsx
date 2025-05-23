@@ -85,7 +85,7 @@ export default function MusicPage() {
           </CardFooter>
         </Card>
 
-        <p className="text-sm text-center text-rose-500">Music can express what words cannot</p>
+        <p className="text-sm text-center text-rose-500">Music can express what words cannot — Ray</p>
       </div>
     </div>
   )
