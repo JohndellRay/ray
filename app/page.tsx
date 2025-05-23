@@ -2,11 +2,31 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { HeartIcon, SunriseIcon, Music } from "lucide-react"
+import { AnimatedCharacter } from "@/components/animated-character"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-rose-50 to-amber-50 flex flex-col items-center justify-center p-4">
-      <div className="max-w-md w-full space-y-8">
+    <div className="min-h-screen bg-gradient-to-b from-rose-50 to-amber-50 flex flex-col items-center justify-center p-4 relative overflow-hidden">
+      {/* Animated Character */}
+      <AnimatedCharacter />
+
+      {/* Floating background hearts */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 animate-float">
+          <HeartIcon className="w-6 h-6 text-rose-200 fill-rose-200 opacity-30" />
+        </div>
+        <div className="absolute top-1/3 right-1/4 animate-float animation-delay-1000">
+          <HeartIcon className="w-4 h-4 text-pink-200 fill-pink-200 opacity-20" />
+        </div>
+        <div className="absolute bottom-1/4 left-1/3 animate-float animation-delay-2000">
+          <HeartIcon className="w-5 h-5 text-rose-300 fill-rose-300 opacity-25" />
+        </div>
+        <div className="absolute bottom-1/3 right-1/3 animate-float animation-delay-3000">
+          <HeartIcon className="w-3 h-3 text-pink-300 fill-pink-300 opacity-30" />
+        </div>
+      </div>
+
+      <div className="max-w-md w-full space-y-8 relative z-10">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-rose-800">Supporting Your Journey</h1>
           <p className="mt-2 text-rose-600">A message of understanding and care</p>
