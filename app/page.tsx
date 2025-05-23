@@ -111,9 +111,10 @@ export default function Home() {
           </CardFooter>
         </Card>
 
-        <p className="text-sm text-center text-rose-500 pt-6">
-          Sent with understanding and respect for your journey — Ray
-        </p>
+        <div className="text-center pt-6">
+          <p className="text-sm text-rose-500">Sent with understanding and respect for your journey</p>
+          <p className="text-sm font-medium text-rose-600 mt-1">Johndell Ray</p>
+        </div>
       </div>
     </div>
   )

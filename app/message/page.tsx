@@ -101,7 +101,10 @@ export default function MessagePage() {
           </CardFooter>
         </Card>
 
-        <p className="text-sm text-center text-blue-500 pt-6">Sent with care and without expectations — Ray</p>
+        <div className="text-center pt-6">
+          <p className="text-sm text-blue-500">Sent with care and without expectations</p>
+          <p className="text-sm font-medium text-blue-600 mt-1">Johndell Ray</p>
+        </div>
       </div>
     </div>
   )

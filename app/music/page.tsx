@@ -120,7 +120,10 @@ export default function MusicPage() {
           </CardFooter>
         </Card>
 
-        <p className="text-sm text-center text-purple-500">Music can express what words cannot — Ray</p>
+        <div className="text-center pt-6">
+          <p className="text-sm text-purple-500">Music can express what words cannot</p>
+          <p className="text-sm font-medium text-purple-600 mt-1">Johndell Ray</p>
+        </div>
       </div>
     </div>
   )
