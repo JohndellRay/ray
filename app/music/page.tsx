@@ -57,7 +57,7 @@ export default function MusicPage() {
 
         <Card className="shadow-lg border-2 border-purple-200 bg-gradient-to-b from-white to-purple-50">
           <CardHeader>
-            <CardTitle className="text-center text-purple-700">Our Song</CardTitle>
+            <CardTitle className="text-center text-purple-700">The Sound Beneath Our Silence</CardTitle>
             <p className="text-center text-sm text-purple-500">A melody that speaks to the heart</p>
           </CardHeader>
           <CardContent className="space-y-6">
