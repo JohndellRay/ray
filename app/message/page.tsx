@@ -3,12 +3,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Sparkles, Leaf, Sun, Music } from "lucide-react"
 import { MessageCharacter } from "@/components/message-character"
+import { DraggableWrapper } from "@/components/draggable-wrapper"
 
 export default function MessagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 via-indigo-50 to-purple-50 flex flex-col items-center justify-center p-4 relative overflow-hidden">
-      {/* Animated Character */}
-      <MessageCharacter />
+      {/* Draggable Character */}
+      <DraggableWrapper id="message-character" initialPosition={{ x: 20, y: window.innerHeight - 150 }}>
+        <MessageCharacter />
+      </DraggableWrapper>
 
       {/* Floating background elements */}
       <div className="absolute inset-0 pointer-events-none">

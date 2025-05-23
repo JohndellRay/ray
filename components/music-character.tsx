@@ -26,7 +26,7 @@ export function MusicCharacter() {
   }, [])
 
   return (
-    <div className="fixed bottom-4 right-4 md:bottom-20 md:right-8 z-10 pointer-events-none">
+    <div className="pointer-events-none">
       {/* Main Character Container */}
       <div className="relative scale-75 md:scale-100 transform-gpu">
         {/* Floating Character */}

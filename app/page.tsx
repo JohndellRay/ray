@@ -3,12 +3,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { HeartIcon, SunriseIcon, Music, Star } from "lucide-react"
 import { AnimatedCharacter } from "@/components/animated-character"
+import { DraggableWrapper } from "@/components/draggable-wrapper"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 via-rose-50 to-amber-50 flex flex-col items-center justify-center p-4 relative overflow-hidden">
-      {/* Animated Character */}
-      <AnimatedCharacter />
+      {/* Draggable Character */}
+      <DraggableWrapper id="home-character" initialPosition={{ x: 20, y: 20 }}>
+        <AnimatedCharacter />
+      </DraggableWrapper>
 
       {/* Floating background elements */}
       <div className="absolute inset-0 pointer-events-none">

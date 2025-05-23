@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Music, ExternalLink } from "lucide-react"
 import { MusicCharacter } from "@/components/music-character"
+import { DraggableWrapper } from "@/components/draggable-wrapper"
 
 export default function MusicPage() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -17,8 +18,13 @@ export default function MusicPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 via-indigo-50 to-pink-50 flex flex-col items-center justify-center p-4 relative overflow-hidden">
-      {/* Animated Character */}
-      <MusicCharacter />
+      {/* Draggable Character */}
+      <DraggableWrapper
+        id="music-character"
+        initialPosition={{ x: window.innerWidth - 150, y: window.innerHeight - 150 }}
+      >
+        <MusicCharacter />
+      </DraggableWrapper>
 
       {/* Floating background elements */}
       <div className="absolute inset-0 pointer-events-none">
