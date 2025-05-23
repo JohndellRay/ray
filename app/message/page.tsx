@@ -89,18 +89,20 @@ export default function MessagePage() {
 
             <p className="text-blue-700 font-medium">Take all the time you need. Your journey matters.</p>
           </CardContent>
-          <CardFooter className="flex justify-center space-x-3">
-            <Link href="/">
-              <Button variant="outline" className="border-2 border-blue-200 text-blue-700 hover:bg-blue-50 shadow-md">
-                Back to Home
-              </Button>
-            </Link>
-            <Link href="/music">
-              <Button variant="outline" className="border-2 border-blue-200 text-blue-700 hover:bg-blue-50 shadow-md">
-                <Music className="h-4 w-4 mr-2" />
-                Song
-              </Button>
-            </Link>
+          <CardFooter className="flex flex-col space-y-3">
+            <div className="flex justify-center space-x-3">
+              <Link href="/">
+                <Button variant="outline" className="border-2 border-blue-200 text-blue-700 hover:bg-blue-50 shadow-md">
+                  Back to Home
+                </Button>
+              </Link>
+              <Link href="/music">
+                <Button variant="outline" className="border-2 border-blue-200 text-blue-700 hover:bg-blue-50 shadow-md">
+                  <Music className="h-4 w-4 mr-2" />
+                  Song
+                </Button>
+              </Link>
+            </div>
           </CardFooter>
         </Card>
 

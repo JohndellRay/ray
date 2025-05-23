@@ -84,6 +84,23 @@
   will-change: transform;
 }
 
+/* 3D transforms */
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.rotate-x-180 {
+  transform: rotateX(180deg);
+}
+
+.-rotate-x-180 {
+  transform: rotateX(-180deg);
+}
+
 /* Reduced motion for better mobile performance */
 @media (prefers-reduced-motion: reduce) {
   .animate-bounce,
@@ -153,4 +170,27 @@
   .animate-pulse {
     animation-duration: 2s;
   }
+}
+
+/* 3D transforms for envelope animation */
+.-rotate-x-45 {
+  transform: rotateX(-45deg);
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Enhanced envelope opening animation */
+@keyframes envelope-open {
+  0% {
+    transform: rotateX(0deg) translateY(0px);
+  }
+  100% {
+    transform: rotateX(-45deg) translateY(8px) scaleY(0.75);
+  }
+}
+
+.envelope-opening {
+  animation: envelope-open 1s ease-out forwards;
 }

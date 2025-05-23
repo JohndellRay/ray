@@ -111,15 +111,17 @@ export default function MusicPage() {
               </div>
             </div>
           </CardContent>
-          <CardFooter className="flex justify-center">
-            <Link href="/">
-              <Button
-                variant="outline"
-                className="border-2 border-purple-200 text-purple-700 hover:bg-purple-50 shadow-md"
-              >
-                Back to Home
-              </Button>
-            </Link>
+          <CardFooter className="flex flex-col space-y-3">
+            <div className="flex justify-center">
+              <Link href="/">
+                <Button
+                  variant="outline"
+                  className="border-2 border-purple-200 text-purple-700 hover:bg-purple-50 shadow-md"
+                >
+                  Back to Home
+                </Button>
+              </Link>
+            </div>
           </CardFooter>
         </Card>
 
