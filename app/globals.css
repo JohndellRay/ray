@@ -68,19 +68,37 @@
   }
 }
 
-/* Custom animations */
+/* Optimized animations for mobile performance */
 @keyframes float {
   0%,
   100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
 }
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Reduced motion for better mobile performance */
+@media (prefers-reduced-motion: reduce) {
+  .animate-bounce,
+  .animate-ping,
+  .animate-pulse,
+  .animate-float {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Mobile-optimized animation delays */
+.animation-delay-500 {
+  animation-delay: 0.5s;
 }
 
 .animation-delay-1000 {
@@ -113,4 +131,26 @@
 
 .animation-delay-5000 {
   animation-delay: 5s;
+}
+
+/* Hardware acceleration for smooth animations */
+.transform-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  .animate-bounce {
+    animation-duration: 3s;
+  }
+
+  .animate-ping {
+    animation-duration: 2s;
+  }
+
+  .animate-pulse {
+    animation-duration: 2s;
+  }
 }
