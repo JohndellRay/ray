@@ -9,29 +9,61 @@ interface DraggableWrapperProps {
   id: string
   initialPosition?: { x: number; y: number }
   className?: string
+  defaultPosition?: "top-left" | "top-right" | "bottom-left" | "bottom-right"
 }
 
-export function DraggableWrapper({ children, id, initialPosition, className = "" }: DraggableWrapperProps) {
+export function DraggableWrapper({
+  children,
+  id,
+  initialPosition,
+  className = "",
+  defaultPosition = "top-right",
+}: DraggableWrapperProps) {
   const [position, setPosition] = useState(initialPosition || { x: 0, y: 0 })
   const [isDragging, setIsDragging] = useState(false)
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 })
+  const [isClient, setIsClient] = useState(false)
   const wrapperRef = useRef<HTMLDivElement>(null)
+
+  // Set isClient to true on component mount
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  // Set default position based on viewport size
+  useEffect(() => {
+    if (typeof window !== "undefined" && !initialPosition) {
+      let newPosition = { x: 20, y: 20 } // default to top-left
+
+      if (defaultPosition === "top-right") {
+        newPosition = { x: window.innerWidth - 150, y: 20 }
+      } else if (defaultPosition === "bottom-left") {
+        newPosition = { x: 20, y: window.innerHeight - 150 }
+      } else if (defaultPosition === "bottom-right") {
+        newPosition = { x: window.innerWidth - 150, y: window.innerHeight - 150 }
+      }
+
+      setPosition(newPosition)
+    }
+  }, [initialPosition, defaultPosition])
 
   // Load saved position from localStorage on mount
   useEffect(() => {
-    const savedPosition = localStorage.getItem(`character-position-${id}`)
-    if (savedPosition) {
-      try {
-        setPosition(JSON.parse(savedPosition))
-      } catch (e) {
-        console.error("Failed to parse saved position", e)
+    if (typeof window !== "undefined") {
+      const savedPosition = localStorage.getItem(`character-position-${id}`)
+      if (savedPosition) {
+        try {
+          setPosition(JSON.parse(savedPosition))
+        } catch (e) {
+          console.error("Failed to parse saved position", e)
+        }
       }
     }
   }, [id])
 
   // Save position to localStorage when it changes
   useEffect(() => {
-    if (!isDragging) {
+    if (typeof window !== "undefined" && !isDragging) {
       localStorage.setItem(`character-position-${id}`, JSON.stringify(position))
     }
   }, [position, isDragging, id])

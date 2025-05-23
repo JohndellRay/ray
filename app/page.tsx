@@ -8,8 +8,8 @@ import { DraggableWrapper } from "@/components/draggable-wrapper"
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 via-rose-50 to-amber-50 flex flex-col items-center justify-center p-4 relative overflow-hidden">
-      {/* Draggable Character */}
-      <DraggableWrapper id="home-character" initialPosition={{ x: 20, y: 20 }}>
+      {/* Draggable Character - using defaultPosition */}
+      <DraggableWrapper id="home-character" defaultPosition="top-left">
         <AnimatedCharacter />
       </DraggableWrapper>
 

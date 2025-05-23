@@ -18,11 +18,8 @@ export default function MusicPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 via-indigo-50 to-pink-50 flex flex-col items-center justify-center p-4 relative overflow-hidden">
-      {/* Draggable Character */}
-      <DraggableWrapper
-        id="music-character"
-        initialPosition={{ x: window.innerWidth - 150, y: window.innerHeight - 150 }}
-      >
+      {/* Draggable Character - using defaultPosition instead of window */}
+      <DraggableWrapper id="music-character" defaultPosition="bottom-right">
         <MusicCharacter />
       </DraggableWrapper>
 

@@ -8,8 +8,8 @@ import { DraggableWrapper } from "@/components/draggable-wrapper"
 export default function MessagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 via-indigo-50 to-purple-50 flex flex-col items-center justify-center p-4 relative overflow-hidden">
-      {/* Draggable Character */}
-      <DraggableWrapper id="message-character" initialPosition={{ x: 20, y: window.innerHeight - 150 }}>
+      {/* Draggable Character - using defaultPosition instead of window */}
+      <DraggableWrapper id="message-character" defaultPosition="bottom-left">
         <MessageCharacter />
       </DraggableWrapper>
 
