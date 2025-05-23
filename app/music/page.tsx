@@ -19,13 +19,13 @@ export default function MusicPage() {
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <Music className="h-12 w-12 text-rose-600 mx-auto mb-4" />
-          <h1 className="text-3xl font-bold text-rose-800">Bawat Piyesa</h1>
-          <p className="mt-2 text-rose-600">Munimuni</p>
+          <h1 className="text-3xl font-bold text-rose-800">seasons</h1>
+          <p className="mt-2 text-rose-600">wave to earth (with lyrics)</p>
         </div>
 
         <Card className="shadow-md border-rose-100">
           <CardHeader>
-            <CardTitle className="text-center text-rose-700">Bawat Piyesa</CardTitle>
+            <CardTitle className="text-center text-rose-700">Our Song</CardTitle>
             <p className="text-center text-sm text-rose-500">A melody that speaks to the heart</p>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -41,8 +41,8 @@ export default function MusicPage() {
               )}
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/0E8B6yl4I5I?si=d55_2RcqbAZHab8k"
-                title="Bawat Piyesa by Munimuni"
+                src="https://www.youtube.com/embed/YWR0WPLZMfM?si=gF12vlMnyVhsh_hq"
+                title="seasons by wave to earth (lyrics)"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 onLoad={handleIframeLoad}
@@ -52,20 +52,20 @@ export default function MusicPage() {
             {/* Message about the song */}
             <div className="bg-white p-4 rounded-lg border border-rose-100">
               <p className="text-rose-700 text-sm">
-                "Bawat Piyesa" - every piece, every part of this journey matters. As you take time to discover yourself,
-                remember that each step, each moment of growth is valuable. This song reminds me that every piece of who
-                you are is worth cherishing.
+                Like seasons, life is always changing. This song reminds me that change is natural and necessary. As you
+                take this time for yourself, remember that this is just a season in your life - a time for growth and
+                renewal. The lyrics in this version will help you understand the beautiful message even more deeply.
               </p>
             </div>
 
             {/* Attribution */}
             <div className="bg-rose-50 p-3 rounded-lg">
               <p className="text-xs text-center text-rose-600">
-                "Bawat Piyesa" performed by Munimuni. Music shared via YouTube.
+                "seasons" performed by wave to earth. Lyrics video shared via YouTube.
               </p>
               <div className="flex justify-center mt-2">
                 <Link
-                  href="https://youtu.be/0E8B6yl4I5I?si=d55_2RcqbAZHab8k"
+                  href="https://youtu.be/YWR0WPLZMfM?si=gF12vlMnyVhsh_hq"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs flex items-center text-rose-600 hover:text-rose-800"
